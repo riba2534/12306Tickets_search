@@ -54,9 +54,18 @@ def cli():
         hard_sleep=data_list[28] if data_list[28] else '--'
         hard_seat=data_list[29] if data_list[29] else '--'
         no_seat=data_list[26] if data_list[26] else '--'
-        pt.add_row([train_no,from_station_code,to_station_code,start_time,
-                    arrive_time,time_duration,first_class_seat,second_class_seat,
-                    soft_sleep,hard_sleep,hard_seat,no_seat])
+        pt.add_row([train_no,
+                    from_station_code,
+                    to_station_code,
+                    start_time,
+                    arrive_time,
+                    time_duration,
+                    first_class_seat,
+                    second_class_seat,
+                    soft_sleep,
+                    hard_sleep,
+                    hard_seat,
+                    no_seat])
         print(pt)
 
 
