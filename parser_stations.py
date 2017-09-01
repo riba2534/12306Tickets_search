@@ -8,8 +8,11 @@ def main():
     r=requests.get(url,verify=False)         #后面的参数可以去除https验证
     r.encoding=r.apparent_encoding
     pattern=u'([\u4e00-\u9fa5]+)\|([A-Z]+)'  #正则表达式匹配
-    result=re.findall(pattern,r.text)
-    pprint(dict(result),indent=4)
+    result=dict(re.findall(pattern,r.text))
+    #pprint(dict(result),indent=4)
+    print(result.keys())
+    print(result.values())
+
 
 if __name__ == '__main__':
     main()
